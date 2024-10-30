@@ -1,0 +1,134 @@
+    /* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    all: unset;
+}
+    /* || VARIABLES  */
+:root {
+    /* COLORS */
+    --BGCOLORLIGHT: #60aef2;
+    --BGCOLORDARK: #3e3d58;
+    --BOXCOLOR: #cee5ff;
+    --BUTTONCOLOR: #282741;
+    --HOVEROK: #3b83c2;
+    --HOVERNOTOK:#8f2d21;
+}
+/* || GENERAL */
+body {
+    font-family: 'lato', sans-serif;
+    height: 100vh;
+    background-image: radial-gradient(var(--BGCOLORLIGHT), var(--BGCOLORDARK));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* || COUNTER */
+.counter {
+    background-color: var(--BOXCOLOR);
+    width: 476px;
+    height: 615px;
+    border-radius: 12px;
+    box-shadow: 0 25px 121px var(--BGCOLORDARK);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter__title{
+    opacity: 0,6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    line-height: 0,9;
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 60px;
+}
+.counter__title--limit{
+    color: var(--HOVERNOTOK);
+}
+.counter__value{
+    color: var(--BUTTONCOLOR);
+    font-size: 200px;
+    font-weight: 600;
+    margin: auto;
+}
+.counter__reset-button{
+    cursor: pointer;
+    margin: auto;
+}
+.counter__reset-icon {
+    opacity: 0.3;
+    font-size: 35px;
+    transition: all 0.4s;
+}
+    /* BUTTONS */
+.counter__buttons {
+    background-color: var(--BUTTONCOLOR);
+    height: 116px;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.counter__button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.counter__button--decrease {
+    border-bottom-left-radius: 12px;
+    border-right: 1px solid var(--BGCOLORLIGHT);
+}
+.counter__button--decrease--zero{
+    background-color: var(--HOVERNOTOK);
+}
+.counter__button--increase {
+    border-bottom-right-radius: 12px;
+}
+.counter__icon {
+    color: var(--BGCOLORLIGHT);
+    opacity: 0.9;
+    font-size: 40px;
+}
+/* HOVERS */
+.counter__reset-icon:hover {
+    opacity: 0.5;
+}
+.counter__button:hover{
+    cursor: pointer;
+}
+.counter__button--decrease:hover {
+    background-color: var(--HOVEROK);
+}
+.counter__button--decrease--zero:hover{
+    background-color: var(--HOVERNOTOK);
+}
+.counter__button--increase:hover {
+    background-color: var(--HOVEROK);
+}
+
+
+/* || RESPONSIVE */
+@media (max-width: 680px) or (max-height: 730px) {
+    .counter{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .counter__title {
+        margin-top: 100px;
+    }
+    .counter__buttons{
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
